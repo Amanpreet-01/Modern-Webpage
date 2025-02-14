@@ -32,10 +32,28 @@
         <li><a href="#">Blog</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <button class="btn">
-        <a href="#">Get Consultant</a>
-        <i class="ri-arrow-right-up-line"></i>
-      </button>
+     <!-- Get Consultant Button -->
+<button class="btn" id="consultantBtn">
+    <span id="selectedOption">Get Consultant</span>
+    <i class="ri-arrow-right-up-line"></i>
+  </button>
+  
+  <!-- Dropdown -->
+  <div class="dropdown" id="dropdown">
+    <label>
+      <input type="radio" name="consultant" value="Business Consultant" />
+      <span>Business Consultant</span>
+    </label>
+    <label>
+      <input type="radio" name="consultant" value="Finance Consultant" />
+      <span>Finance Consultant</span>
+    </label>
+    <label>
+      <input type="radio" name="consultant" value="Marketing Consultant" />
+      <span>Marketing Consultant</span>
+    </label>
+  </div>
+  
 
       <!-- slidebar -->
       <div class="sidebar">
@@ -282,6 +300,33 @@
             </ul>
           </div>
         </div>
+          
+        <div class="feature-item">
+            <div class="feature-content">
+              <div class="feature-top">
+                <img src="Image/feature_icon5.png" alt="" />
+                <h4>Voice Commands</h4>
+              </div>
+              <p>
+                Experience seamless interaction with intelligent voice recognition. 
+               Control functions and execute commands.
+              </p>
+              <ul>
+                <li>
+                    Smart Assistance
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+                <li>
+                    AI-Powered Responses
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+                <li>
+                    Hands-Free Control
+                  <i class="ri-arrow-right-s-line"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -297,31 +342,48 @@
         <span>Image generator</span>
       </p>
     </marquee>
-
+    <!--Banner-->
     <section class="banner">
-      <div class="banner-left banner-container">
-        <div class="banner-info-top">
-          <h4>75%</h4>
-          <h5>Smart technology</h5>
+        <div class="banner-left banner-container">
+          <!-- Front Side -->
+          <div class="front" style="background-image: url('Image/banner1.jpg');">
+            <div class="banner-info-top">
+              <h4>75%</h4>
+              <h5>Smart technology</h5>
+            </div>
+            <h4 class="banner-title">
+              Super Fast Form <br />
+              other design tools
+            </h4>
+          </div>
+      
+          <!-- Back Side -->
+          <div class="back">
+            <h4>Innovation Hub</h4>
+            <p>Experience the next generation of AI-driven solutions.</p>
+          </div>
         </div>
-        <h4 class="banner-title">
-          Super Fast Form <br />
-          other design tools
-        </h4>
-      </div>
-
-      <div class="banner-right banner-container">
-        <div class="banner-info-top">
-          <h4>28K</h4>
-          <h5>AI Innovation</h5>
+      
+        <div class="banner-right banner-container">
+          <!-- Front Side -->
+          <div class="front" style="background-image: url('Image/banner2.jpg');">
+            <div class="banner-info-top">
+              <h4>28K</h4>
+              <h5>AI Innovation</h5>
+            </div>
+            <h4 class="banner-title">
+              Active and premium <br />
+              regular users everyday
+            </h4>
+          </div>
+      
+          <!-- Back Side -->
+          <div class="back">
+            <h4>Global Impact</h4>
+            <p>Join a growing community of AI enthusiasts and pioneers.</p>
+          </div>
         </div>
-        <h4 class="banner-title">
-          Active and premium <br />
-          regular users everyday
-        </h4>
-      </div>
-    </section>
-
+      </section>
     <!-- process overview -->
     <section class="process-overview">
       <div class="process-overview-title section-title">
@@ -412,7 +474,124 @@
             <i class="ri-arrow-right-line" id="arrow-right"></i>
         </div>
     </section>
-
+       <!--Blog Section-->
+       <section class="Blog">
+        <div class="Blog_title Section_title">
+            <h2>Valuble insights to change your startup idea</h2>
+        </div>
+        <div class="Blog_Wrap">
+            <div class="Blog_Item">
+                <div class="Blog_Image Section_Image">
+                          <img src="Image/blog1.jpg" alt="">
+                          <ul class="Blog_Meta">
+                            <li><span>Firewall</span></li>
+                            <li><span>November 24, 2025</span></li>
+                          </ul>
+                </div>
+                <div class="Blog_Content Section_title">
+                        <h4>Announcing if attachment resolution sentim.</h4>
+                        <button>
+                            <a href="#">Read More</a>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                </div>
+            </div>
+            <div class="Blog_Item">
+                <div class="Blog_Image Section_Image">
+                          <img src="Image/blog2.jpg" alt="">
+                          <ul class="Blog_Meta">
+                            <li><span>Payment</span></li>
+                            <li><span>November 24, 2025</span></li>
+                          </ul>
+                </div>
+                <div class="Blog_Content Section_title">
+                        <h4>This Prefabric passive house is highly sustainabe</h4>
+                        <button>
+                            <a href="#">Read More</a>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                </div>
+            </div>
+            <div class="Blog_Item">
+                <div class="Blog_Image Section_Image">
+                          <img src="Image/blog3.jpg" alt="">
+                          <ul class="Blog_Meta">
+                            <li>
+                                <span>Payment</span>
+                            </li>
+                            <li>
+                                <span>November 24, 2025</span>
+                            </li>
+                          </ul>
+                </div>
+                <div class="Blog_Content Section_title">
+                        <h4>Picked up a brusselse burger Sprouts with ham</h4>
+                        <button>
+                            <a href="#">Read More</a>
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                </div>
+            </div>
+        </div>
+    </section> 
+ <!--Footer-->
+ <footer>
+    <div class="Footer_Top">
+        <ul class="Footer_left">
+            <li>
+                <p>Want to connect?</p>
+                <h4>NeuraNova@gmail.com</h4>
+            </li>
+            <li>
+                <p>Call us anytime</p>
+                <h4>+4733378901</h4>
+            </li>
+            <li>
+                <p>Our Location</p>
+                <h4>175 10h Street, Office 375 Berlin, Devolina 21562</h4>
+            </li>
+        </ul>
+        <div class="Footer_right">
+            <div class="Footer_Col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>Company Profile</li>
+                    <li>Help Center</li>
+                    <li>Projects</li>
+                    <li>Plans & Pricing</li>
+                    <li>News & Blog</li>
+                </ul>
+            </div>
+            <div class="Footer_Col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li>Data Analytics</li>
+                    <li>Cyber Related</li>
+                    <li>Growth Hacking</li>
+                    <li>Strategy Development</li>
+                    <li>Business Intelligent</li>
+                </ul>
+            </div>
+            <div class="Footer_Col">
+                <p>
+                    join our Subscribers list to get the latest news and speacial offers.
+                </p>
+                <div class="Input_Box">
+                    <input type="text" placeholder="Your Email">
+                    <i class="ri-send-plane-fill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer_Bottom">
+        <p>Copyrights 2025. All Rights Reserved by <span>Amanpreet Kaur</span></p>
+        <ul>
+            <li>About</li>
+            <li>Team</li>
+            <li>Support</li>
+        </ul>
+    </div>
+ </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>

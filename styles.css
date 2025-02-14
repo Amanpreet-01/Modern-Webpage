@@ -211,13 +211,158 @@ section{
     display: none;
 
 }
+:root {
+    --primary-color: #246BFD;
+    --secondary-color: #1f2b38;
+    --light-color: #bec7d4;
+    --white-color: #ffffff;
+    --black-color: #04000b;
+    --black-light: #131414;
+    --transition-fast: all 0.4s ease;
+    --transition-slow: all 0.6s ease;
+    --body-color: #000000;
+}
 
+/* Button */
+.btn {
+    display: flex;
+    align-items: center;
+    background: var(--primary-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    position: relative;
+}
 
+.btn a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 8px;
+}
 
+.btn i {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
 
+.btn:hover {
+    background: var(--secondary-color);
+}
 
+.btn:hover i {
+    transform: translateX(5px);
+}
 
+/* Dropdown Styling */
+.dropdown {
+    display: none;
+    background: var(--black-light);
+    padding: 16px;
+    border-radius: 12px;
+    position: absolute;
+    width: 300px; /* Wider for better visibility */
+    top: 80px; /* Positioned below button */
+    right: 20px; /* Shifted to the right side of the screen */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    transition: var(--transition-slow);
+    border: 2px solid var(--primary-color); /* Border highlight */
+    overflow: hidden;
+    z-index: 999;
+}
 
+.dropdown h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+    background: var(--black-light);
+    transform: rotate(45deg);
+    border-left: 2px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+}
+
+.dropdown.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown label {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+    border: 2px solid var(--light-color);
+    margin-bottom: 10px;
+}
+
+.dropdown input[type="radio"] {
+    display: none;
+}
+
+.dropdown span {
+    position: relative;
+    padding-left: 30px;
+}
+
+.dropdown span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--light-color);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+/* Filled Circle when selected */
+.dropdown input[type="radio"]:checked + span::before {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Hover Effect */
+.dropdown label:hover {
+    background: var(--secondary-color);
+    transform: scale(1.02);
+    border-color: var(--primary-color);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* hero */
 .hero{
     min-height: 100vh;
@@ -519,8 +664,8 @@ section{
 /* marquee */
 
 .scroll-text span{
-    font-size: 10rem;
-    font-weight: 700;
+    font-size: 5rem;
+    font-weight: 500;
     margin: 0px 80px;
     color:var(--primary-color);
     position: relative;
@@ -549,49 +694,78 @@ section{
 }
 
 /* banner */
-.banner-container{
-    width: 100%;
-    min-height: 300px;
-    background: var(--white-color);
+.banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    padding: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-    color: var(--white-color);
-}
-.banner-left{
-    width: 45%;
-    background-image: url(Image/banner1.jpg);
-}
-.banner-right{
-    width: 55%;
-    background-image: url(Image/banner2.jpg);
-}
-.banner-container .banner-title{
-    font-size: 1.3rem;
-    font-weight: 600;
-    line-height: 1.8rem;
-}
-.banner-info-top h4{
-    font-size: 3.5rem;
-    padding-bottom: 14px;
-}
-.banner-info-top h5{
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 10px 30px;
-    border-radius: 8px;
-   
+    gap: 20px;
+    perspective: 1000px; /* Enables 3D depth effect */
 }
 
-/* process overview */
+.banner-container {
+    width: 45%;
+    min-height: 300px;
+    background: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    cursor: pointer;
+    padding: 50px; /* Keeps your original padding */
+}
+
+/* Flip effect on hover */
+.banner-container:hover {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back sides */
+.banner-container .front,
+.banner-container .back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+/* Styling the front */
+.banner-container .front {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white-color);
+}
+
+/* Back Side */
+.banner-container .back {
+    background: var(--primary-color);
+    color: var(--white-color);
+    transform: rotateY(180deg);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner-container h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-container h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
 .process-overview{
     align-items: start;
     gap: 130px;
@@ -652,7 +826,6 @@ section{
 }
 
 /* lanch-gixus */
-
 .lanch-gixus{
     flex-direction: column;
     min-height: 500px;
@@ -703,8 +876,6 @@ section{
     -webkit-background-clip: text;
     background-clip: text;
     -moz-background-clip: text;
-
-
 }
 
 .icon{
@@ -767,11 +938,6 @@ section{
 }
 
 
-
-
-
-
-
 /* 9.55   at 30 media quey of about    at 40.46 of features ,  48.15*/
 @media screen and (max-width: 1000px){
     #toggle{
@@ -815,10 +981,7 @@ section{
         font-weight: 700;
         z-index: 999;
         padding: 12px;
-    } */
-
-
-    
+    } */    
 }
 
 /*sticky*/
@@ -830,102 +993,136 @@ section{
 }
 
 /*Blog Section*/
- .Blog{
-flex-direction: column;
- }
- .Blog_title{
-    margin: auto;
-    text-align: center;
- }
- .Blog_Wrap{
-   width: 100%;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   place-items: center;
-   place-content: center;
-   gap: 30px; 
- }
-.Blog_Item{
-    width: 100%;
+.Blog {
     display: flex;
-    align-items: start;
-    justify-content: center;
     flex-direction: column;
-    gap: 20px;
-    color: var(--white-color);
-}
-.Blog_Image{
-    width: 100%;
-}
-.Blog_Item img{
-    border-radius: 10px;
-}
-.Blog_Meta{
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
-    background-color: var(--black-color);
-    padding-right: 25px;
-    gap: 20px;
+    padding: 50px 5%;
 }
-.Blog_Meta::after{
-    position: absolute;
-    right: -20px;
-    bottom: 0%;
-    content: ' ';
-    height: 33px;
-    width: 20px;
-    border-bottom-left-radius: 17px;
-    box-shadow: 0 20px 0 0 var(--black-color);
+
+.Blog_title {
+    margin-bottom: 40px;
+    text-align: center;
 }
-.Blog_Meta::before{
-    position: absolute;
-   left: -1px;
-   top: -22px;
-    content: ' ';
-    height: 33px;
-    width: 20px;
-    border-bottom-left-radius: 17px;
-    box-shadow: 0 20px 0 0 var(--black-color);
-}
-.Blog_Meta li span{
-    border: 1px solid rgba(255, 255, 255, .4);
-    font-size: 1.1rem;
-    padding: 3px 14px;
-    border-radius: 20px;
-}
-.Blog_Meta li:nth-child(2){
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 600;
-}
-.Blog_Content{
+
+.Blog_Wrap {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    place-items: center;
 }
-.Blog_Content h4{
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-.Blog_Content button{
-    height: 20px;
+
+/* Blog Card Styling */
+.Blog_Item {
     width: 100%;
-    justify-content: flex-start;
-    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    background: var(--black-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
-.Blog_Content button a,
-.Blog_Content button i{
-    text-transform: uppercase;
-    color: var(--light-color);
-    font-size: 1.1rem;
+
+.Blog_Item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Blog_Image {
+    width: 100%;
+    position: relative;
+}
+
+.Blog_Item img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.Blog_Item:hover img {
+    transform: scale(1.05);
+}
+
+/* Blog Meta (Category + Date) */
+.Blog_Meta {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    gap: 12px;
+}
+
+.Blog_Meta li {
+    list-style: none;
+}
+
+.Blog_Meta li span {
+    color: var(--white-color);
     font-weight: 500;
 }
-.Blog_Content button::before{
-    display: none;
+
+/* Blog Content */
+.Blog_Content {
+    padding: 20px;
+    text-align: left;
+    color: var(--white-color);
 }
+
+.Blog_Content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.Blog_Content button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 2px solid var(--light-color);  /* Added border */
+    border-radius: 8px;  /* Rounded edges */
+    padding: 8px 14px;  /* Proper spacing */
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Blog_Content button a {
+    color: var(--light-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Blog_Content button i {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.Blog_Content button:hover {
+    background: var(--light-color);
+    color: var(--black-color);
+}
+
+.Blog_Content button:hover a,
+.Blog_Content button:hover i {
+    color: var(--black-color);
+}
+
+.Blog_Content button:hover i {
+    transform: translateX(5px);
+}
+
 /*Footer*/
 footer{
     width: 100%;
