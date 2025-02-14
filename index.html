@@ -1,62 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
-</head>
-<body>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+    />
+  </head>
+  <body>
     <!-- nav -->
-     <nav class="navbar">
-        <div class="logo">
-            <i class="ri-menu-fill" id="toggle"></i>
-            <h2>
-                <a href="#">Neura <span>Nova</span></a>
-            </h2>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="ri-menu-fill" id="toggle"></i>
+        <h2>
+          <a href="#">Neura <span>Nova</span></a>
+        </h2>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="btn">
+        <a href="#">Get Consultant</a>
+        <i class="ri-arrow-right-up-line"></i>
+      </button>
+
+      <!-- slidebar -->
+      <div class="sidebar">
+        <div class="sidebar-logo logo">
+          <h2>
+            <a href="#">Neura <span>Nova</span></a>
+          </h2>
+          <i class="ri-close-large-line" id="close-menu"></i>
         </div>
-        <ul class="menu">
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#">About</a></li>
-            <li> <a href="#">Services</a></li>
-            <li> <a href="#">Blog</a></li>
-            <li> <a href="#">Contact</a></li>
+        <ul class="side-menu">
+          <li>
+            <a href="#">Home</a>
+            <i class="ri-arrow-right-s-line"></i>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+            <i class="ri-arrow-right-s-line"></i>
+          </li>
+          <li>
+            <a href="#">Services</a>
+            <i class="ri-arrow-right-s-line"></i>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+            <i class="ri-arrow-right-s-line"></i>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+            <i class="ri-arrow-right-s-line"></i>
+          </li>
         </ul>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-title section-title">
+        <h1>
+          Innovative Creations with <br />
+          <span>AI-Powered Intelligence</span>
+        </h1>
+        <p>
+          Revolutionize your creative journey with cutting-edge AI technology.
+          Transform ideas into real unmatched precision and futuristic design,
+          powered by NeuraNova's advanced solutions.
+        </p>
+      </div>
+
+      <div class="reviews-box">
+        <div class="review-image">
+          <img src="Image/r1.jpg" alt="" />
+          <img src="Image/r2.jpg" alt="" />
+          <img src="Image/r3.jpg" alt="" />
+          <img src="Image/r4.jpg" alt="" />
+          <span>+20K</span>
+        </div>
+        <div class="rate">
+          <i class="ri-star-fill"></i>
+          <span>4.8 58 Reviews</span>
+        </div>
+        <div class="reviews-info">
+          <h4>Top AI data talent</h4>
+          <p>
+            The next generation production for designer. Resolve parties but why
+            she shewing
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-title section-title">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+          tempore facere laboriosam, repudiandae doloremque ab a amet neque eius
+          soluta odit officia veniam, minus sapiente quaerat dolor accusamus
+          magni incidunt maiores voluptatibus nemo quod nostrum iusto ex! Quam,
+          veritatis fugiat.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum unde
+          modi maiores quibusdam voluptates nesciunt? Ab veritatis quasi
+          molestiae facere?
+        </p>
         <button class="btn">
-            <a href="#">Get Consultant</a>
-            <i class="ri-arrow-right-up-line"></i>
+          <a href="#">Explore More</a>
         </button>
+      </div>
 
-        <!-- slidebar -->
-         <div class="sidebar">
-            <div class="sidebar-logo logo">
-                <h2>
-                    <a href="#">Neura <span>Nova</span></a>
-                </h2>
-                <i class="ri-menu-fill" id="toggle"></i>
-                
+      <div class="about-image section-image">
+        <div class="bio-wrap">
+          <div class="bio-image">
+            <img src="Image/about2.jpg" alt="" />
+          </div>
+          <div class="bio-image">
+            <img src="Image/about3.jpg" alt="" />
+          </div>
+          <div class="bio-image">
+            <img src="Image/about1.jpg" alt="" />
+          </div>
+          <div class="bio-image">
+            <img src="Image/about4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-title section-title">
+        <h2>Amazing feature that you will be able to use now.</h2>
+      </div>
+      <div class="feature-wrap">
+        <div class="feature-item">
+          <div class="feature-content">
+            <div class="feature-top">
+              <img src="Image/feature_icon.png" alt="" />
+              <h4>Auto Video Captioning</h4>
             </div>
-         </div>
-     </nav>
+            <p>
+              Early so do instantly pretended. see general few civilly amiable
+              pleased account Resolve parties but she shewing,
+            </p>
+            <ul>
+              <li>
+                Transcription
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Subtitle
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Foriegn Language
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="feature-item">
+          <div class="feature-content">
+            <div class="feature-top">
+              <img src="Image/feature_icon2.png" alt="" />
+              <h4>Programming Solutions</h4>
+            </div>
+            <p>
+              Aarnestly so do instantly pretended. see general few civilly
+              amiable pleased account Resolve parties but she shewing,
+            </p>
+            <ul>
+              <li>
+                Functionality
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Mathematics
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Bug Fixing
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="feature-item">
+          <div class="feature-content">
+            <div class="feature-top">
+              <img src="Image/feature_icon3.png" alt="" />
+              <h4>Artificial graphics</h4>
+            </div>
+            <p>
+              Barnestly so do instantly pretended. see general few civilly
+              amiable pleased account Resolve parties but she shewing,
+            </p>
+            <ul>
+              <li>
+                Image Generate
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Restoration
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Color Mix
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="feature-item">
+          <div class="feature-content">
+            <div class="feature-top">
+              <img src="Image/feature_icon4.png" alt="" />
+              <h4>Machine Learning</h4>
+            </div>
+            <p>
+              Tarnestly so do instantly pretended. see general few civilly
+              amiable pleased account Resolve parties but she shewing,
+            </p>
+            <ul>
+              <li>
+                Transcription
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Subtitle
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Foreign Language
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="feature-item">
+          <div class="feature-content">
+            <div class="feature-top">
+              <img src="Image/feature_icon5.png" alt="" />
+              <h4>Speak & Command</h4>
+            </div>
+            <p>
+              sarnestly so do instantly pretended. see general few civilly
+              amiable pleased account Resolve parties but she shewing,
+            </p>
+            <ul>
+              <li>
+                Functionality
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Mathematics
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+              <li>
+                Bug Fixing
+                <i class="ri-arrow-right-s-line"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <marquee direction="left">
+      <p class="scroll-text">
+        <span>Code Solutions</span>
+        <span>Artificial Intelligence</span>
+        <span>Code Solutions</span>
+        <span>Image generator</span>
+        <span>Code Solutions</span>
+        <span>Artificial intelligence</span>
+        <span>Code Solutions</span>
+        <span>Image generator</span>
+      </p>
+    </marquee>
 
+    <section class="banner">
+      <div class="banner-left banner-container">
+        <div class="banner-info-top">
+          <h4>75%</h4>
+          <h5>Smart technology</h5>
+        </div>
+        <h4 class="banner-title">
+          Super Fast Form <br />
+          other design tools
+        </h4>
+      </div>
 
+      <div class="banner-right banner-container">
+        <div class="banner-info-top">
+          <h4>28K</h4>
+          <h5>AI Innovation</h5>
+        </div>
+        <h4 class="banner-title">
+          Active and premium <br />
+          regular users everyday
+        </h4>
+      </div>
+    </section>
 
+    <!-- process overview -->
+    <section class="process-overview">
+      <div class="process-overview-title section-title">
+        <h2>How does it work?</h2>
+      </div>
+      <div class="process-overview-wrap">
+        <div class="process-overview-item">
+          <span>1</span>
+          <h4>Input taken from users</h4>
+          <p>
+            excuse Deal say over contain performance from comparison new
+            melancholy themselves.
+          </p>
+        </div>
+        <div class="process-overview-item">
+          <span>2</span>
+          <h4>Activation Function</h4>
+          <p>
+            excuse Deal say over contain performance from comparison new
+            melancholy themselves.
+          </p>
+        </div>
+        <div class="process-overview-item">
+          <span>3</span>
+          <h4>FeedForward Process</h4>
+          <p>
+            excuse Deal say over contain performance from comparison new
+            melancholy themselves.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- lanch gixus -->
+    <section class="lanch-gixus">
+      <div class="lanch-gixus-title section-title">
+        <h1>Try Gixus Now</h1>
+        <div class="icon">
+          <img src="Image/robot.png" alt="" />
+        </div>
+      </div>
+    </section>
 
+    <!-- testimonials -->
+    <section class="testimonials">
+        <div class="swiper tst-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonials-items">
+                        <div class="testimonials-image section-image">
+                            <img src="Image/provider1.jpg" alt="">
+                            <div class="tst-icon">
+                                <img src="Image/quote.png" alt="">
+                            </div>
+                        </div>
+                        <div class="testimonials-title section-title">
+                            <h2>the best service ever</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus fugiat rerum voluptatum eius nesciunt. Optio vero, consequuntur reiciendis, error, numquam sint sit id soluta quam doloribus eum tempora? Quas aut quidem harum quae autem. Quos laboriosam doloremque provident accusamus deleniti doloribus quaerat, sequi rem accusantium eius veniam, beatae numquam.</p>
+                            <div class="provider">
+                                <h4>Matthew J. Wyman</h4>
+                                <span>Senior Consultant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- second -->
+                <div class="swiper-slide">
+                    <div class="testimonials-items">
+                        <div class="testimonials-image section-image">
+                            <img src="Image/provider2.jpg" alt="">
+                            <div class="tst-icon">
+                                <img src="Image/quote.png" alt="">
+                            </div>
+                        </div>
+                        <div class="testimonials-title section-title">
+                            <h2>Awesome opportunity</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus fugiat rerum voluptatum eius nesciunt. Optio vero, consequuntur reiciendis, error, numquam sint sit id soluta quam doloribus eum tempora? Quas aut quidem harum quae autem. Quos laboriosam doloremque provident accusamus deleniti doloribus quaerat, sequi rem accusantium eius veniam, beatae numquam.</p>
+                            <div class="provider">
+                                <h4>Anthony spar</h4>
+                                <span>Marketung manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="ri-arrow-left-line" id="arrow-left"></i>
+            <i class="ri-arrow-right-line" id="arrow-right"></i>
+        </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
