@@ -35,3 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+//sidebar
+
+let Sidebar = document.querySelector('.sidebar');
+let show_Menu = document.getElementById('toggle');
+let showMenu = document.getAnimations('close-menu')
+
+show_Menu.addEventListener('click',function(){
+    Sidebar.classList.add('show_sidebar');
+})
+
+closeMenu.addEventListener('click',function(){
+    Sidebar.classList.remove('show_sidebar');
+})
