@@ -36,18 +36,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+//testimonial
+let index = 0;
+function moveSlide(step) {
+    const slides = document.querySelectorAll(".slide");
+    index = (index + step + slides.length) % slides.length;
+    document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
+}
 
 //sidebar
 
-let Sidebar = document.querySelector('.sidebar');
-let show_Menu = document.getElementById('toggle');
-let showMenu = document.getAnimations('close-menu')
+// let Sidebar = document.querySelector('.sidebar');
+// let show_Menu = document.getElementById('toggle');
+// let showMenu = document.getAnimations('close-menu')
 
-show_Menu.addEventListener('click',function(){
-    Sidebar.classList.add('show_sidebar');
-})
+// show_Menu.addEventListener('click',function(){
+//     Sidebar.classList.add('show_sidebar');
+// })
 
-closeMenu.addEventListener('click',function(){
-    Sidebar.classList.remove('show_sidebar');
-})
+// closeMenu.addEventListener('click',function(){
+//     Sidebar.classList.remove('show_sidebar');
+// })
+
+
