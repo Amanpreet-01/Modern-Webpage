@@ -36,13 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//slider teamssss
+
+    var swiper = new Swiper('.teamSwiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1400: { slidesPerView: 3 },
+            1200: { slidesPerView: 3 },
+            900: { slidesPerView: 2 },
+            500: { slidesPerView: 1 },
+            0: { slidesPerView: 1 }
+        }
+    });
+
+
+
 //testimonial
-let index = 0;
-function moveSlide(step) {
-    const slides = document.querySelectorAll(".slide");
-    index = (index + step + slides.length) % slides.length;
-    document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
-}
+
 
 //sidebar
 
